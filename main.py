@@ -1,8 +1,7 @@
 import pygame as pyg
 
 pyg.init()
-print('setup start')
-window = pyg.display.set_mode(size = (700, 580))
+window = pyg.display.set_mode(size = (700, 580)) #creates the window
 
 #keeps the window opened
 while True:
