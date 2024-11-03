@@ -10,7 +10,7 @@ from code.Const import WIN_WIDTH, COLOR_ORANGE, COLOR_WHITE, MENU_OPTION, GAME_N
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pyg.image.load() #background image
+        self.surf = pyg.image.load('./Assets/MenuBg.png') #background image
         self.rect = self.surf.get_rect(left = 0, top = 0)
 
     def run(self, ):
@@ -22,10 +22,10 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             #IMPRIME NOME
             for i in range(len(GAME_NAME)):
-                self.menu_text(80, GAME_NAME[i], COLOR_ORANGE, ((WIN_WIDTH / 2), 70 + 50 * i))
+                self.menu_text(50, GAME_NAME[i], COLOR_ORANGE, ((WIN_WIDTH / 2), 50 + 30 * i))
             #IMPRIME OPTIONS
             for i in range(len(MENU_OPTION)):
-                self.menu_text(40, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 350 + 40 * i))
+                self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 180 + 20 * i))
 
             pyg.display.flip()
 
